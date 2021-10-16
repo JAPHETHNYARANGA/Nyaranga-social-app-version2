@@ -2,6 +2,7 @@ package com.moringaschool.nyaranga_social_app_version2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -45,5 +46,15 @@ public class MainActivity extends AppCompatActivity {
     }
     public void loginMethod(TwitterSession twitterSession){
         String userName = twitterSession.getUserName();
+        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+        intent.putExtra("username", userName);
+        startActivity(intent);
+    }
+    @Override
+    protected void onActityResult(int requestCode, int resultCode, intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Pass the activity result to the login button.
+        loginButton.onActivityResult(requestCode, resultCode, data);
     }
 }
