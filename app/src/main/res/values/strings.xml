@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Nyaranga-social-app-version2</string>
-    <string name="com.twitter.sdk.android.CONSUMER_KEY">z7ZEj90ORCVvdGocMCiOTbJSo</string>
-    <string name="com.twitter.sdk.android.CONSUMER_SECRET">bkg8m31Lq2pW58Ge4jV7dM9x88pD6RftCVIy48XCCiu5Nk2SmK</string>
+    <string name="internet">Offline! Connect to Internet</string>
 </resources>
