@@ -1,11 +1,10 @@
-package com.moringaschool.nyaranga_social_app_version2;
+package com.moringaschool.nyaranga_social_app_version2.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-
-
+import com.moringaschool.nyaranga_social_app_version2.R;
 
 
 public class MainActivity extends AppCompatActivity {

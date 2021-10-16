@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nyarangasocialappversion2"
         tools:targetApi="p">
-        <activity android:name=".HomeActivity" >
+        <activity android:name=".DetailActivity" >
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".controller.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
