@@ -34,11 +34,16 @@ public class MainActivity extends AppCompatActivity {
                 loginMethod(session);
             }
 
+
+
             @Override
             public void failure(TwitterException exception) {
                 Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();
 
             }
         });
+    }
+    public void loginMethod(TwitterSession twitterSession){
+        String userName = twitterSession.getUserName();
     }
 }
