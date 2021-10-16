@@ -1,7 +1,6 @@
 package com.moringaschool.nyaranga_social_app_version2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class HomeActivity extends AppCompatActivity {
