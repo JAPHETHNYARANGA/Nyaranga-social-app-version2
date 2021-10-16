@@ -3,6 +3,7 @@ package com.moringaschool.nyaranga_social_app_version2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void failure(TwitterException exception) {
+                Toast.makeText(getApplicationContext(),"Login Failed", Toast.LENGTH_SHORT).show();
 
             }
         });
