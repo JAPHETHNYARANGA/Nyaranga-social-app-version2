@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nyaranga-social-app-version2</string>
+    <string name="app_name">Github Api</string>
     <string name="search">Search</string>
     <string name="error_message">Failed to get result, please try again.</string>
     <string name="hint_message">Type a Query For Github!</string>
@@ -7,4 +7,5 @@
     <string name="name">Name</string>
     <string name="owner">Owner</string>
     <string name="stars">Stars</string>
+    <string name="desc1">This is the first description</string>
 </resources>

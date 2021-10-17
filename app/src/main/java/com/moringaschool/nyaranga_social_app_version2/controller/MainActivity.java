@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,12 +20,17 @@ import com.moringaschool.nyaranga_social_app_version2.R;
 import com.moringaschool.nyaranga_social_app_version2.controller.NetworkUtils;
 import com.moringaschool.nyaranga_social_app_version2.controller.RepoListAdapter;
 import com.moringaschool.nyaranga_social_app_version2.controller.Repository;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.List;
 
+import static com.squareup.picasso.Picasso.get;
+
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Repository>>{
+
+
 
     private ListView dataListView;
     private EditText requestTag;
@@ -38,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         loadingBar = findViewById(R.id.loadingBar);
         errorMessage = findViewById(R.id.errorMessage);
@@ -59,6 +67,18 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
          * Initialize the loader
          */
         getSupportLoaderManager().initLoader(GITHUB_SEARCH_LOADER, null, this);
+
+//        String imageUri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcS_hDsDXbbb2N_TTGyHrX4Z_nlDP3f4IoKQ&usqp=CAU";
+//        ImageView AvatarImage = (ImageView) findViewById(R.id.avatar);
+//        Picasso.get().load(imageUri).into(AvatarImage);
+//
+//        Picasso.get().load(imageUri).fit().centerCrop()
+//                .placeholder(R.drawable.user_placeholder)
+//                .error(R.drawable.user_placeholder_error)
+//                .into(imageView);
+
+
+
     }
 
     @Override
@@ -100,17 +120,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     return;
                 }
 
-                /*
-                 * When we initially begin loading in the background, we want to display the
-                 * loading indicator to the user
-                 */
+
                 loadingBar.setVisibility(View.VISIBLE);
 
-                // COMPLETED (2) If mGithubJson is not null, deliver that result. Otherwise, force a load
-                /*
-                 * If we already have cached results, just deliver them now. If we don't have any
-                 * cached results, force a load.
-                 */
+
                 if (mRepositoryList != null) {
                     deliverResult(mRepositoryList);
                 } else {
@@ -120,10 +133,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
             @Override
             public List<Repository> loadInBackground() {
-                /* Extract the search query from the args using our constant */
+
                 String searchQueryUrlString = args.getString(GITHUB_QUERY_TAG);
 
-                /* Parse the URL from the passed in String and perform the search */
                 try {
                     List<Repository> githubSearchResults = NetworkUtils.getDataFromApi(searchQueryUrlString);
                     return githubSearchResults;
@@ -143,12 +155,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data) {
-        /* When we finish loading, we want to hide the loading indicator from the user. */
+
         loadingBar.setVisibility(View.INVISIBLE);
-        /*
-         * If the results are null, we assume an error has occurred. There are much more robust
-         * methods for checking errors, but we wanted to keep this particular example simple.
-         */
+
         if (null == data) {
             showErrorMessage();
         } else {
@@ -161,20 +170,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(Loader<List<Repository>> loader) {
-        /*
-         * We aren't using this method in our example application, but we are required to Override
-         * it to implement the LoaderCallbacks<String> interface
-         */
+
     }
 
-
-    /**
-     * This method will make the View for the JSON data visible and
-     * hide the error message.
-     * <p>
-     * Since it is okay to redundantly set the visibility of a View, we don't
-     * need to check whether each view is currently visible or invisible.
-     */
     private void showJsonDataView() {
         /* First, make sure the error is invisible */
         errorMessage.setVisibility(View.INVISIBLE);
@@ -182,13 +180,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         dataListView.setVisibility(View.VISIBLE);
     }
 
-    /**
-     * This method will make the error message visible and hide the JSON
-     * View.
-     * <p>
-     * Since it is okay to redundantly set the visibility of a View, we don't
-     * need to check whether each view is currently visible or invisible.
-     */
     private void showErrorMessage() {
         /* First, hide the currently visible data */
         dataListView.setVisibility(View.INVISIBLE);
@@ -196,33 +187,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         errorMessage.setVisibility(View.VISIBLE);
     }
 
-
-    /**
-     * This method retrieves the search text from the EditText, constructs the
-     * URL (using {@link NetworkUtils}) for the github repository you'd like to find, displays
-     * that URL in a TextView, and finally request that an AsyncTaskLoader performs the GET request.
-     */
     public void makeGithubSearchQuery() {
         String githubQuery = requestTag.getText().toString();
 
 
         Bundle queryBundle = new Bundle();
         queryBundle.putString(GITHUB_QUERY_TAG, githubQuery);
-
-        /*
-         * Now that we've created our bundle that we will pass to our Loader, we need to decide
-         * if we should restart the loader (if the loader already existed) or if we need to
-         * initialize the loader (if the loader did NOT already exist).
-         *
-         * We do this by first store the support loader manager in the variable loaderManager.
-         * All things related to the Loader go through through the LoaderManager. Once we have a
-         * hold on the support loader manager, (loaderManager) we can attempt to access our
-         * githubSearchLoader. To do this, we use LoaderManager's method, "getLoader", and pass in
-         * the ID we assigned in its creation. You can think of this process similar to finding a
-         * View by ID. We give the LoaderManager an ID and it returns a loader (if one exists). If
-         * one doesn't exist, we tell the LoaderManager to create one. If one does exist, we tell
-         * the LoaderManager to restart it.
-         */
         LoaderManager loaderManager = getSupportLoaderManager();
         Loader<String> githubSearchLoader = loaderManager.getLoader(GITHUB_SEARCH_LOADER);
         if (githubSearchLoader == null) {
@@ -231,5 +201,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             loaderManager.restartLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
         }
     }
+
 
 }
