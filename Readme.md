@@ -6,7 +6,9 @@ This is a project that consumes the github api endpoints and returns values as p
 
 ## Screenshots
 
-![App image](app/src/Assets/screenshot.png)
+![App image](app/src/Assets/screenshot1.png)
+![App image](app/src/Assets/screenshot2.png)
+![App image](app/src/Assets/screenshot3.png)
 
 ## Setup And Intallation
 For users, just download the app on your Android device and you are good to go.a
