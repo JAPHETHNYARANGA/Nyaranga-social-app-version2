@@ -3,6 +3,8 @@ package com.moringaschool.nyaranga_social_app_version2.controller;
 import android.net.Uri;
 import android.util.Log;
 
+import com.moringaschool.nyaranga_social_app_version2.controller.models.Repository;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

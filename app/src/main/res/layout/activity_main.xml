@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".controller.MainActivity">
+    tools:context=".controller.ui.MainActivity">
 
     <EditText
         android:id="@+id/requestTag"

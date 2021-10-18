@@ -1,4 +1,4 @@
-package com.moringaschool.nyaranga_social_app_version2.controller;
+package com.moringaschool.nyaranga_social_app_version2.controller.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.moringaschool.nyaranga_social_app_version2.R;
+import com.moringaschool.nyaranga_social_app_version2.controller.models.Repository;
 
 public class RepoListAdapter extends ArrayAdapter<Repository> {
 

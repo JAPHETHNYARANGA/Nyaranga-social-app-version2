@@ -1,7 +1,6 @@
-package com.moringaschool.nyaranga_social_app_version2.controller;
+package com.moringaschool.nyaranga_social_app_version2.controller.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ShareCompat;
 
 
 import android.content.Intent;
@@ -21,12 +20,13 @@ public class DetailActivity extends AppCompatActivity {
 
         Button btn = (Button)findViewById(R.id.search_repo);
 
+        Button contact = (Button)findViewById(R.id.contact_us);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(DetailActivity.this,MainActivity.class);
+                Intent intent= new Intent(DetailActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,6 +43,16 @@ public class DetailActivity extends AppCompatActivity {
         Picasso.get()
                 .load("https://cdn.thenewstack.io/media/2021/09/48affeb3-github-new-user-page-1024x562.png")
                 .into(imageView1);
+
+
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, ContactUs.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 }

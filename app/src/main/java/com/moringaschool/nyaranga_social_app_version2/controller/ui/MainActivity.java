@@ -1,4 +1,4 @@
-package com.moringaschool.nyaranga_social_app_version2.controller;
+package com.moringaschool.nyaranga_social_app_version2.controller.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
@@ -11,21 +11,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.moringaschool.nyaranga_social_app_version2.R;
 import com.moringaschool.nyaranga_social_app_version2.controller.NetworkUtils;
-import com.moringaschool.nyaranga_social_app_version2.controller.RepoListAdapter;
-import com.moringaschool.nyaranga_social_app_version2.controller.Repository;
-import com.squareup.picasso.Picasso;
+import com.moringaschool.nyaranga_social_app_version2.controller.Adapter.RepoListAdapter;
+import com.moringaschool.nyaranga_social_app_version2.controller.models.Repository;
 
 import java.io.IOException;
 import java.util.List;
-
-import static com.squareup.picasso.Picasso.get;
 
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Repository>>{

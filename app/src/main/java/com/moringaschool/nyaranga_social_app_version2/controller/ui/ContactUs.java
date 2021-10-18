@@ -1,4 +1,4 @@
-package com.moringaschool.nyaranga_social_app_version2.controller;
+package com.moringaschool.nyaranga_social_app_version2.controller.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
