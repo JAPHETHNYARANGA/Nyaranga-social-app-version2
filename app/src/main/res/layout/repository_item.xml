@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/name"
-                    android:layout_marginLeft="60dp"/>
+                    />
 
                 <TextView
                     android:id="@+id/repoLang"
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/repoName"
                     android:text="@string/language"
-                    android:layout_marginLeft="60dp"/>
+                   />
 
                 <TextView
                     android:id="@+id/repoOwner"
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/repoLang"
                     android:text="@string/owner"
-                    android:layout_marginLeft="60dp"/>
+                   />
 
                 <TextView
                     android:id="@+id/repoStars"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/repoOwner"
                     android:text="@string/stars"
-                    android:layout_marginLeft="60dp"
+
                     />
 
                 <ImageView
