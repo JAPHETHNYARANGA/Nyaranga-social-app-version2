@@ -25,7 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_to"
-            android:background="@color/white" />
+            android:text="nyaranga4@gmail.com"
+            android:background="@color/white"
+            />
 
     </LinearLayout>
     <EditText
