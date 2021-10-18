@@ -6,28 +6,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        tools:replace="android:appComponentFactory"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nyarangasocialappversion2"
+        tools:replace="android:appComponentFactory"
         tools:targetApi="p">
-        <activity android:name=".controller.DetailActivity" >
+        <activity android:name=".controller.ContactUs"></activity>
+        <activity android:name=".controller.DetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".controller.MainActivity" >
+        <activity android:name=".controller.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".controller.MainActivity" />
-
         </activity>
     </application>
 
