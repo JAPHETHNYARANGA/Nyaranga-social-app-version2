@@ -68,14 +68,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
          */
         getSupportLoaderManager().initLoader(GITHUB_SEARCH_LOADER, null, this);
 
-//        String imageUri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcS_hDsDXbbb2N_TTGyHrX4Z_nlDP3f4IoKQ&usqp=CAU";
-//        ImageView AvatarImage = (ImageView) findViewById(R.id.avatar);
-//        Picasso.get().load(imageUri).into(AvatarImage);
-//
-//        Picasso.get().load(imageUri).fit().centerCrop()
-//                .placeholder(R.drawable.user_placeholder)
-//                .error(R.drawable.user_placeholder_error)
-//                .into(imageView);
 
 
 
