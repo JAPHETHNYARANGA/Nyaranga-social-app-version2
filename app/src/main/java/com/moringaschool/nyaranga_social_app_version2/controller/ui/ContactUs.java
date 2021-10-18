@@ -11,19 +11,24 @@ import android.widget.EditText;
 
 import com.moringaschool.nyaranga_social_app_version2.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ContactUs extends AppCompatActivity {
 
-    EditText etTo, etSubject, etMessage;
-    Button btSend;
+    @BindView(R.id.et_to) EditText etTo;
+    @BindView(R.id.et_message) EditText etMessage;
+    @BindView(R.id.et_subject) EditText etSubject;
+    @BindView(R.id.bt_send) Button btSend;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-    etTo = (EditText)findViewById(R.id.et_to);
-    etSubject=(EditText)findViewById(R.id.et_subject);
-    etMessage=(EditText)findViewById(R.id.et_message);
-    btSend = (Button)findViewById(R.id.bt_send);
+        ButterKnife.bind(this);
     etTo.setEnabled(false);
     btSend.setOnClickListener(new View.OnClickListener() {
         @Override

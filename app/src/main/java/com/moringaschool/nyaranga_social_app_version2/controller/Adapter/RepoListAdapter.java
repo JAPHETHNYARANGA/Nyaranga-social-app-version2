@@ -15,6 +15,8 @@ import com.moringaschool.nyaranga_social_app_version2.controller.models.Reposito
 
 public class RepoListAdapter extends ArrayAdapter<Repository> {
 
+
+
     //Constructor
     public RepoListAdapter(@NonNull Context context) {
         super(context, 0);
@@ -27,7 +29,6 @@ public class RepoListAdapter extends ArrayAdapter<Repository> {
         if(view == null){
             view = LayoutInflater.from(getContext()).inflate(R.layout.repository_item,parent,false);
         }
-
         TextView repoName = view.findViewById(R.id.repoName);
         TextView repoLang = view.findViewById(R.id.repoLang);
         TextView repoOwner = view.findViewById(R.id.repoOwner);

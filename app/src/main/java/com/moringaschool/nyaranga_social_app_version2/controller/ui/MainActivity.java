@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private ProgressBar loadingBar;
     private RepoListAdapter adapter;
 
+
+
     private static final int GITHUB_SEARCH_LOADER = 1;
     private static final String GITHUB_QUERY_TAG = "query";
     @Override
@@ -59,9 +61,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             requestTag.setText(queryUrl);
         }
 
-        /*
-         * Initialize the loader
-         */
+      //initializing loader
         getSupportLoaderManager().initLoader(GITHUB_SEARCH_LOADER, null, this);
 
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             protected void onStartLoading() {
 
-                /* If no arguments were passed, we don't have a query to perform. Simply return. */
+               //return null if no arguments
                 if (args == null) {
                     return;
                 }
@@ -169,9 +169,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     private void showErrorMessage() {
-        /* First, hide the currently visible data */
+        //hide vidible data
         dataListView.setVisibility(View.INVISIBLE);
-        /* Then, show the error */
+       //now show error
         errorMessage.setVisibility(View.VISIBLE);
     }
 

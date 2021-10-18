@@ -12,15 +12,22 @@ import android.widget.ImageView;
 import com.moringaschool.nyaranga_social_app_version2.R;
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DetailActivity extends AppCompatActivity {
+
+    @BindView(R.id.search_repo) Button btn;
+    @BindView(R.id.contact_us) Button contact;
+
+
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Button btn = (Button)findViewById(R.id.search_repo);
+        ButterKnife.bind(this);
 
-        Button contact = (Button)findViewById(R.id.contact_us);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
