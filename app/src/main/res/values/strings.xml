@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Github Api</string>
     <string name="search">Search</string>
-    <string name="error_message">Failed to get result, please try again.</string>
     <string name="hint_message">Type a Query For Github!</string>
     <string name="language">Language</string>
     <string name="name">Name</string>
     <string name="owner">Owner</string>
     <string name="stars">Stars</string>
     <string name="desc1">This is the first description</string>
+    <string name="about_app">This is a simple from end to a github api, you enter the repository name , i.e Ecommerce, and you will receive all the repositories containing ecommerce codes.</string>
 </resources>

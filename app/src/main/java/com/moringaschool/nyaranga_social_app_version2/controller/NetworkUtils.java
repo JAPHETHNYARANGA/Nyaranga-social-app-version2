@@ -22,19 +22,11 @@ public class NetworkUtils {
 
     private final static String PARAM_QUERY = "q";
 
-    /*
-     * The sort field. One of stars, forks, or updated.
-     * Default: results are sorted by best match if no field is specified.
-     */
+
     private final static String PARAM_SORT = "sort";
     private final static String SORT_BY = "stars";
 
-    /**
-     * Builds the URL used to query Github.
-     *
-     * @param gitHubSearchQuery The keyword that will be queried for.
-     * @return The URL to use to query the weather server.
-     */
+
     private static URL buildUrl(String gitHubSearchQuery) {
         //Create Full Link
         Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
@@ -51,13 +43,7 @@ public class NetworkUtils {
         return url;
     }
 
-    /**
-     * This method returns the entire result from the HTTP response.
-     *
-     * @param url The URL to fetch the HTTP response from.
-     * @return The contents of the HTTP response.
-     * @throws IOException Related to network and stream reading
-     */
+
     private static String getResponseFromHttpUrl(URL url) throws IOException {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
@@ -78,11 +64,7 @@ public class NetworkUtils {
         }
     }
 
-    /**
-     * This Method take Json String and formatter it
-     * @param jsonResponse
-     * @return list of repository to show it in listview
-     */
+
     private static List<Repository> jsonFormatter(String jsonResponse){
         List<Repository> repositoryList = new ArrayList<>();
         try{

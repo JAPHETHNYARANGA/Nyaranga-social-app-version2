@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
+
     tools:context=".controller.MainActivity">
 
     <EditText
         android:id="@+id/requestTag"
-        android:textColor="@color/grayWhite"
+        android:textColor="@color/black"
         android:textColorHint="@color/gray"
         android:hint="@string/hint_message"
         android:layout_width="match_parent"
