@@ -20,12 +20,14 @@
             android:layout_height="wrap_content"
             android:text="To"
             android:textSize="20sp"
+            android:textColor="@color/black"
             android:gravity="center" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_to"
             android:text="nyaranga4@gmail.com"
+            android:textColor="@color/black"
             android:background="@color/white"
             />
 
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/et_subject"
         android:hint="subject"
+        android:textColor="@color/black"
         android:padding="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_round" />
@@ -47,12 +50,14 @@
         android:padding="10dp"
         android:gravity="top"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_round" />
+        android:background="@drawable/bg_round"
+        android:textColor="@color/black"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bt_send"
         android:text="Send"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:padding="10dp"
         android:layout_marginTop="10dp"

@@ -32,7 +32,6 @@
           android:layout_width="wrap_content"
           android:layout_height="35dp"
           android:layout_alignParentRight="true"
-          android:background="@drawable/ic_launcher_background"
           android:text="Search Repository"
           android:textSize="10dp"
           />
@@ -66,7 +65,6 @@
                 android:layout_width="200dp"
                 android:layout_height="300dp"
                 android:padding="2dp"
-                android:src="@drawable/ic_launcher_background"
                 android:layout_marginLeft="5dp" />
             <Space
                 android:layout_weight="1"
@@ -99,7 +97,6 @@
                 android:layout_width="200dp"
                 android:layout_height="300dp"
                 android:padding="2dp"
-                android:src="@drawable/ic_launcher_background"
                  />
 
             <TextView
@@ -156,7 +153,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center|bottom"
-        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
         >
 
         <Button
