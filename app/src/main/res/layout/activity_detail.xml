@@ -14,14 +14,14 @@
           android:id="@+id/hello"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Hello"
+          android:text="Github"
           android:textColor="#CA582E"
           android:textSize="20dp" />
       <TextView
           android:layout_below="@+id/hello"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Japheth Nyaranga"
+          android:text="Github Api App"
           android:textColor="#CA582E"
           android:textSize="26dp"
           android:layout_marginTop="10dp"
@@ -48,7 +48,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        >
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -64,22 +65,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Backend"
+                android:text="Api"
                 android:textSize="25dp"
                 android:textColor="#d703082b"
                 android:textStyle="bold"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12 courses"
-                android:textSize="14dp"
-                android:textColor="#ab03082b"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="80dp" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -96,22 +89,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FrontEnd"
+                android:text="Api"
                 android:textSize="25dp"
                 android:textColor="#d703082b"
                 android:textStyle="bold"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12 courses"
-                android:textSize="14dp"
-                android:textColor="#ab03082b"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="80dp" />
+
         </RelativeLayout>
 
     </LinearLayout>
