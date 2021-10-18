@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.moringaschool.nyaranga_social_app_version2.R;
+
 public class ContactUs extends AppCompatActivity {
 
     @Override
